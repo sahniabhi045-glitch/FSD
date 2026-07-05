@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+        table {
+            width: 750px;
+            margin: 0 auto;
+            background-color: #7A0000; /* Screenshot ke mutabik Maroon Color */
+            color: white;
+            border-collapse: collapse;
+            font-weight: bold;
+        }
+        td {
+            padding: 12px 20px;
+            vertical-align: middle;
+        }
+        td.label-cell {
+            width: 35%;
+            font-size: 16px;
+        }
+        td.input-cell {
+            width: 65%;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 90%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .hint {
+            font-size: 11px;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 4px;
+            color: #ffcccc;
+        }
+        .inline-label {
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        .checkbox-group, .radio-group {
+            font-weight: normal;
+        }
+        .btn-container {
+            text-align: center;
+            padding: 20px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2> [cite: 3]
+
+    <form>
+        <table border="0">
+            <tr>
+                <td class="label-cell">First Name</td> 
+                <td class="input-cell">
+                    <input type="text" name="firstName" value="Abhinandan" maxlength="50"> 
+                    <span class="hint">(Max 50 Characters Allowed)</span> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Last Name</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="text" name="lastName" value="Kashyap" maxlength="50"> [cite: 4]
+                    <span class="hint">(Max 50 Characters Allowed)</span> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Email ID</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="email" name="emailId" value="sahniabhi045@gmail.com"> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Mobile Number</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="text" name="mobileNumber" value="9065xxxxxx" maxlength="10"> [cite: 4]
+                    <span class="hint">(10 Digits Allowed)</span> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Gender</td> [cite: 4]
+                <td class="input-cell class="radio-group"">
+                    <input type="radio" name="gender" id="male" value="Male" checked> [cite: 4]
+                    <label for="male" class="inline-label">Male</label> [cite: 4]
+                    <input type="radio" name="gender" id="female" value="Female"> [cite: 4]
+                    <label for="female" class="inline-label">Female</label> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Date of Birth (DOB)</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="date" name="dob"> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell" style="vertical-align: top;">Address</td> [cite: 4]
+                <td class="input-cell">
+                    <textarea name="address" rows="4" cols="30"></textarea> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">City</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="text" name="city" value="Bangalore" maxlength="50"> [cite: 4]
+                    <span class="hint">(Max 50 Characters Allowed)</span> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Pin Code</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="text" name="pincode" value="560068" maxlength="6"> [cite: 4]
+                    <span class="hint">(Max 6 Numbers Allowed)</span> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">State</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="text" name="state" value="Karnataka" maxlength="50"> [cite: 4]
+                    <span class="hint">(Max 50 Characters Allowed)</span> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">Country</td> [cite: 4]
+                <td class="input-cell">
+                    <input type="text" name="country" value="India" readonly> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell" style="vertical-align: top;">Hobbies</td> [cite: 4]
+                <td class="input-cell checkbox-group">
+                    <input type="checkbox" id="drawing" name="hobbies" value="Drawing" checked> [cite: 4]
+                    <label for="drawing" class="inline-label">Drawing</label> [cite: 4]
+                    <input type="checkbox" id="singing" name="hobbies" value="Singing"> [cite: 4]
+                    <label for="singing" class="inline-label">Singing</label> [cite: 4]
+                    <br><br>
+                    <input type="checkbox" id="dancing" name="hobbies" value="Dancing"> [cite: 4]
+                    <label for="dancing" class="inline-label">Dancing</label> [cite: 4]
+                    <input type="checkbox" id="sketching" name="hobbies" value="Sketching"> [cite: 4]
+                    <label for="sketching" class="inline-label">Sketching</label> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell" style="vertical-align: top;">Qualification</td> [cite: 4]
+                <td class="input-cell checkbox-group">
+                    <input type="checkbox" id="highschool" name="qualification" value="10th"> [cite: 4]
+                    <label for="highschool" class="inline-label">High School (10th)</label> [cite: 4]
+                    <br>
+                    <input type="checkbox" id="higher_school" name="qualification" value="12th"> [cite: 4]
+                    <label for="higher_school" class="inline-label">Higher School(12th)</label> [cite: 4]
+                    <br>
+                    <input type="checkbox" id="graduation" name="qualification" value="Graduation"> [cite: 4]
+                    <label for="graduation" class="inline-label">Graduation (Bachelors)</label> [cite: 4]
+                    <br>
+                    <input type="checkbox" id="post_graduation" name="qualification" value="Post Graduation"> [cite: 4]
+                    <label for="post_graduation" class="inline-label">Post Graduation (Masters)</label> [cite: 4]
+                    <br>
+                    <input type="checkbox" id="phd" name="qualification" value="PhD"> [cite: 4]
+                    <label for="phd" class="inline-label">Phd</label> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell" style="vertical-align: top;">Courses<br>Applied For</td> [cite: 4]
+                <td class="input-cell radio-group">
+                    <input type="radio" id="bca" name="course" value="BCA" checked> [cite: 4]
+                    <label for="bca" class="inline-label">BCA(Bachelor of Computer Applications)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="bcom" name="course" value="BCom"> [cite: 4]
+                    <label for="bcom" class="inline-label">B.Com (Bachelor of Commerce)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="bsc" name="course" value="BSc"> [cite: 4]
+                    <label for="bsc" class="inline-label">B.Sc(Bachelor of Science)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="ba" name="course" value="BA"> [cite: 4]
+                    <label for="ba" class="inline-label">BA(Bachelor of Arts)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="mca" name="course" value="MCA"> [cite: 4]
+                    <label for="mca" class="inline-label">MCA(Master of Computer Applications)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="mcom" name="course" value="MCom"> [cite: 4]
+                    <label for="mcom" class="inline-label">M.Com(Master of Commerce)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="msc" name="course" value="MSc"> [cite: 4]
+                    <label for="msc" class="inline-label">M.Sc(Master of Science)</label> [cite: 4]
+                    <br>
+                    <input type="radio" id="ma" name="course" value="MA"> [cite: 4]
+                    <label for="ma" class="inline-label">MA(Master of Arts)</label> [cite: 4]
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="btn-container">
+                    <input type="submit" value="Submit"> [cite: 4]
+                    <input type="reset" value="Reset"> [cite: 4]
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Form</title>
+    <style>
+        body {
+            background-color: #c2f094; /* Light green outer background */
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 40px;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #00ff66; /* Bright green inner background */
+            border: 2px solid #000000;
+            width: 600px;
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        h2 {
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 40px;
+            font-size: 28px;
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group.align-start {
+            align-items: flex-start;
+        }
+
+        .label-column {
+            width: 45%;
+            font-size: 18px;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+        }
+
+        .bullet {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .input-column {
+            width: 55%;
+        }
+
+        /* Text & Password Inputs */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 6px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Textarea for Address */
+        textarea {
+            width: 100%;
+            height: 80px;
+            padding: 6px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        /* Radio and Checkbox inline layouts */
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+            font-size: 16px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        /* DOB Dropdowns */
+        .dob-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dob-group select {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+        }
+
+        /* Buttons styling */
+        .button-group {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-top: 25px;
+            margin-left: 45%; /* Aligns with the input column */
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 4px 12px;
+            font-size: 14px;
+            font-family: inherit;
+            background-color: #f0f0f0;
+            border: 1px solid #a0a0a0;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Agreement section */
+        .agreement-group {
+            margin-top: 25px;
+            margin-left: 45%;
+            font-size: 16px;
+        }
+
+        .agreement-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>USER FORM</h2>
+
+        <form action="#" method="post">
+            
+            <div class="form-group">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> FIRST NAME
+                </div>
+                <div class="input-column">
+                    <input type="text" name="firstname" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> PASSWORD
+                </div>
+                <div class="input-column">
+                    <input type="password" name="password" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> GENDER
+                </div>
+                <div class="input-column">
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group align-start">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> ADDRESS
+                </div>
+                <div class="input-column">
+                    <textarea name="address"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> D.O.B
+                </div>
+                <div class="input-column">
+                    <div class="dob-group">
+                        <select name="dob_month">
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            </select>
+                        
+                        <select name="dob_day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            </select>
+
+                        <select name="dob_year">
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> SELECT GAMES
+                </div>
+                <div class="input-column">
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="games" value="Hockey"> Hockey</label>
+                        <label><input type="checkbox" name="games" value="Football"> Football</label>
+                        <label><input type="checkbox" name="games" value="Cricket"> Cricket</label>
+                        <label><input type="checkbox" name="games" value="Volley Ball"> Volley Ball</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-column">
+                    <span class="bullet">&bull;</span> MARITAL STATUS
+                </div>
+                <div class="input-column">
+                    <div class="radio-group">
+                        <label><input type="radio" name="marital_status" value="Married"> Married</label>
+                        <label><input type="radio" name="marital_status" value="Unmarried"> Unmarried</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+            <div class="agreement-group">
+                <label><input type="checkbox" name="agreement" required> I accept this agrement</label>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
